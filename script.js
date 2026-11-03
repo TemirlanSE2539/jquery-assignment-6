@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
     console.log("jQuery is ready!");
@@ -19,16 +18,31 @@ $(document).ready(function() {
         $("body").css("color", "white");
     });
 
+    $("#hide").click(function() {
+        $("#about").hide();
+    });
+
+    $("#show").click(function() {
+        $("#about").show();
+    });
+
+    $("#toggle").click(function() {
+        $("#about").toggle();
+    });
+
     $("#fadeIn").click(function() {
-        $("#photo1, #photo2").fadeIn();
+        $("#photo1").fadeIn();
+        $("#photo2").fadeIn();
     });
 
     $("#fadeOut").click(function() {
-        $("#photo1, #photo2").fadeOut();
+        $("#photo1").fadeOut();
+        $("#photo2").fadeOut();
     });
 
     $("#fadeToggle").click(function() {
-        $("#photo1, #photo2").fadeToggle();
+        $("#photo1").fadeToggle();
+        $("#photo2").fadeToggle();
     });
 
     $(".slide1").click(function() {
@@ -71,15 +85,10 @@ $(document).ready(function() {
         }
     });
 
-    $("#animateSkills").click(function() {
-        $("#bar1").animate({width: "80%"}, 1000);
-        $("#bar2").animate({width: "70%"}, 1000);
-        $("#bar3").animate({width: "60%"}, 1000);
-    });
     $("#animateBars").click(function() {
-    $("#htmlBar").animate({width: "80%"}, 1000);
-    $("#cssBar").animate({width: "70%"}, 1000);
-    $("#jsBar").animate({width: "60%"}, 1000);
-});
+        $("#htmlBar").animate({width: "80%"}, 1000);
+        $("#cssBar").animate({width: "70%"}, 1000);
+        $("#jsBar").animate({width: "60%"}, 1000);
+    });
 
 });
